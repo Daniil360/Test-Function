@@ -82,29 +82,77 @@ addProduct - Функциия которая добовляет товар в к
 // console.log(sum)
 
 
+// const result = addProduct();
 
-function addProduct() {
-    const isAvailable = isProductAvailable();
+// console.log(result);
 
 
-    if (!isAvailable) {
-        console.log('Товара нет в наличие');
-        return;
-    }
+// function addProduct() {
+//     const isAvailable = isProductAvailable();
 
-        const blocked = isBlocked();
 
-        if (blocked) {
-            console.log('Вы заблокированы');
-            return;
-        }
+//     if (!isAvailable) {
+//         console.log('Товара нет в наличие');
+//         return;
+//     }
 
-            const possible = possibleToDelivery();
+//         const blocked = isBlocked();
 
-            if (possible) {
-                console.log('Товар добавлен в корзину');
-            }
-            else {
-                console.log('Нет возможности доставить');
-            }
-        }
+//         if (blocked) {
+//             console.log('Вы заблокированы');
+//             return;
+//         }
+
+//             const possible = possibleToDelivery();
+
+//             if (!possible) {
+//                 console.log('Нет возможности доставить');
+//                 return;
+//             }
+
+
+
+//             console.log('Товар добавлен в корзину');
+
+//             return 'Все хорошо';
+// }
+
+
+
+
+
+// const calculate = () => {
+//     const a = 10;
+//     const b = 15;
+
+//     return a + b;
+// }
+
+// console.log(calculate())
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
