@@ -149,14 +149,31 @@ addProduct - Функциия которая добовляет товар в к
 
 
 function getFilms(title = 'Все фильмы') {
-    const result = {
+    return {
         filmTitle: title,
-        films: [],
+        films: getFilmsArray(),
     };
-
-    return result;
 }
 
+
+function getFilmsArray() {
+    const films = [];
+
+    addNewFilm({ name: 'Хроники Нарнии' }, 0);
+    addNewFilm({ name: 'Человек паук'}, 1); 
+    addNewFilm({ name: 'Что-то еще'}, 2);
+    addNewFilm({ name: 'Плохой фильм' });
+
+    function addNewFilm(film, index) {
+        if (index === undefined) {
+            console.log('Этот фильм не будет добавлен, тк нет индекса');
+            return;
+        }
+        films[index] = film;
+    }
+
+    return films;
+}
 
 
 
@@ -179,7 +196,7 @@ console.log(myFilms);
 // ---
 
 
-const myFilms2 = getFilms('Фильмы за сегодня');
+// const myFilms2 = getFilms('Фильмы за сегодня');
 
 
 // {
@@ -190,19 +207,19 @@ const myFilms2 = getFilms('Фильмы за сегодня');
 //         { name: 'Что-то еще' },
 //     }
 // }
-console.log(myFilms);
+// console.log(myFilms);
 
 
-// getFilms
-const filsms = [];
+// // getFilmsArray
+// const filsms = [];
 
-addNewFilm({ name: 'Хроники Нарнии' }, 0);
-addNewFilm({ name: 'Человек паук'}, 1);
-addNewFilm({ name: 'Что-то еще'}, 2);
+// addNewFilm({ name: 'Хроники Нарнии' }, 0);
+// addNewFilm({ name: 'Человек паук'}, 1);
+// addNewFilm({ name: 'Что-то еще'}, 2);
 
 
-// console.log - этот фильм не будет добавлен, тк нет индекса
-addNewFilm({ name: 'Плохой фильм' });
+// // console.log - этот фильм не будет добавлен, тк нет индекса
+// addNewFilm({ name: 'Плохой фильм' });
 
 
 
