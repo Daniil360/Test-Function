@@ -159,26 +159,24 @@ function getFilms(title = 'Все фильмы') {
 function getFilmsArray() {
     const films = [];
 
-    addNewFilm({ name: 'Хроники Нарнии' }, 0);
-    addNewFilm({ name: 'Человек паук'}, 1); 
-    addNewFilm({ name: 'Что-то еще'}, 2);
-    addNewFilm({ name: 'Плохой фильм' });
+    addNewFilm(films, { name: 'Хроники Нарнии' }, 0);
+    addNewFilm(films, { name: 'Человек паук'}, 1); 
+    addNewFilm(films, { name: 'Что-то еще'}, 2);
+    addNewFilm(films, { name: 'Плохой фильм' });
+
+    return films;
+}
 
     function addNewFilm(film, index) {
         if (index === undefined) {
             console.log('Этот фильм не будет добавлен, тк нет индекса');
             return;
         }
-        films[index] = film;
-    }
 
-    return films;
+        films[index] = film;
 }
 
-
-
-
-
+    
 const myFilms = getFilms();
 
 // {
