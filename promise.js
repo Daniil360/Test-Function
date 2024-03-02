@@ -38,11 +38,14 @@
 function fethUserInfo(callback) {
     setTimeout(() => {
         // fetch
-        const data = { id: 1, name: 'Alex'};
+        const data = { id: 1, name: 'Alex'  };
         callback(data);
     }, 1000);
 }
 
+function fetchUserGames(id, callback) {
+    
+}
 
 function run() {
     fethUserInfo((userInfo) => {
